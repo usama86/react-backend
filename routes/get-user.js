@@ -9,13 +9,14 @@ var assert = require('assert');
 
 
 var url = 'mongodb://localhost:27017/grabABite';
-var resultArray = [];
+
 var a;
 var b;
 
 
 
 router.post('/', function(req, res, next) {
+  var resultArray = [];
   var x=req.body.name;
   var y=req.body.password;
  
