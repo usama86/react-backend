@@ -27,12 +27,7 @@ router.post('/', function(req, res, next) {
     var cursor = db.collection('users').find({email:x,password:y});
     cursor.forEach(function(doc, err) {
       assert.equal(null, err);
-      resultArray.push( 
-        doc);
-
-        
-              
-        // resultArray["name"]       
+      resultArray.push(doc);               
     }, function() {
       if ( resultArray.length == 0) {
         var msg1="don't";
