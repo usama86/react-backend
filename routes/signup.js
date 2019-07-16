@@ -13,6 +13,7 @@ var resultArray = [];
 
 
 
+
 router.post('/', function(req, res, next) {
     var FirstName = req.body.firstname;
     var LastName = req.body.lastname;
@@ -47,32 +48,7 @@ router.post('/', function(req, res, next) {
             );
     });
   });
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+          
         assert.equal(null, err);
         //  var cursor = db.collection('users').insertOne({firstName:FirstName , lastName:LastName , password:Password ,email:Email, phoneNo:MobileNo , roleName:Role});
           db.collection('users').insertOne({firstName:FirstName , lastName:LastName , password:Password ,email:Email, phoneNo:MobileNo , roleName:Role,address:add,registeredDate:dt,status:'active'}, 
