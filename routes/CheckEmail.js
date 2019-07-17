@@ -18,13 +18,12 @@ var b;
 router.post('/', function(req, res, next) {
   var resultArray = [];
   var x=req.body.name;
-  var y=req.body.password;
  
   mongo.connect(url, function(err, db )  {
 
 
     assert.equal(null, err);
-    var cursor = db.collection('users').find({email:x,password:y});
+    var cursor = db.collection('users').find({email:x});
     cursor.forEach(function(doc, err) {
       assert.equal(null, err);
       resultArray.push(doc);               
@@ -36,9 +35,9 @@ router.post('/', function(req, res, next) {
      
     }
     else {
-     // var msg="do ";
+      var msg="do ";
  // // // // //  //   var na1=resultArray.firstName;
-   //   var token = "kjdgksdgfhfd ";    
+      var token = "kjdgksdgfhfd ";    
       res.send(resultArray);
       //+JSON.stringify(resultArray);
     }
@@ -65,30 +64,6 @@ router.post('/', function(req, res, next) {
   
 
 });
-
-
-router.get('/', function(req, res, next) {
-  var resultArray = [];
-
-
-
-  mongo.connect(url, function(err, db)  {
-    assert.equal(null, err);
-    var cursor = db.collection('users').find();     //{"name":"ahsan"}
-    cursor.forEach(function(doc, err) {
-      assert.equal(null, err);
-      resultArray.push(doc);
-      
-    }, function() {
-      db.close();
-      res.json(
-        resultArray
-          
-            );
-    });
-  });
-});
-
 
 
 

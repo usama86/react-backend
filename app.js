@@ -29,7 +29,7 @@ var DeleteUser = require('./routes/DeleteUser');
 var getFood =require('./routes/get-food');
 var updateFood = require('./routes/update-food');
 var deleteFood = require('./routes/delete-food')
-
+var checkEmail= require('./routes/CheckEmail');
 
 
 
@@ -73,7 +73,7 @@ app.use('/DeleteUser',DeleteUser);
 app.use('/get-food',getFood);
 app.use('/update-food',updateFood);
 app.use('/delete-food',deleteFood);
-
+app.use('/checkEmail',checkEmail);
 
 
 
