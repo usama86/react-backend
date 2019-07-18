@@ -28,7 +28,8 @@ var UpdateUser = require('./routes/UpdateUser');
 var DeleteUser = require('./routes/DeleteUser');
 var getFood =require('./routes/get-food');
 var updateFood = require('./routes/update-food');
-var deleteFood = require('./routes/delete-food')
+var deleteFood = require('./routes/delete-food');
+var updateDeliveryProfile = require('./routes/updateProfileDelivery');
 
 
 
@@ -73,6 +74,7 @@ app.use('/DeleteUser',DeleteUser);
 app.use('/get-food',getFood);
 app.use('/update-food',updateFood);
 app.use('/delete-food',deleteFood);
+app.use('./updateProfileDelivery',updateDeliveryProfile)
 
 
 
