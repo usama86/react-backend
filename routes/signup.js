@@ -27,7 +27,7 @@ router.post('/', function(req, res, next) {
     
   mongo.connect(url, function(err, db )  {
 
-    if(Role=="Vendor"){
+    if(Role=="Vendor"){  // missing vendor name
         
         var rA = [];
 

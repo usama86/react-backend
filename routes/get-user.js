@@ -38,8 +38,8 @@ router.post('/', function(req, res, next) {
     else {
       var msg="do ";
  // // // // //  //   var na1=resultArray.firstName;
-      var token = "kjdgksdgfhfd";    
-      res.send(msg+token);
+      var token = "kjdgksdgfhfd ";    
+      res.send(resultArray);
       //+JSON.stringify(resultArray);
     }
      
