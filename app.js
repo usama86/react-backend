@@ -33,9 +33,8 @@ var checkEmail= require('./routes/CheckEmail');
 var deleteFood = require('./routes/delete-food');
 var updateDeliveryProfile= require('./routes/updateProfileDelivery');
 var maxid=require('./routes/maxID');
-
-
 var acceptOrder=require('./routes/acceptOrder');
+var acceptOrderDelivery=require('./routes/acceptOrderDelivery');
 
 
 var app = express();
@@ -82,6 +81,7 @@ app.use('/checkEmail',checkEmail);
 app.use('/updateProfileDelivery',updateDeliveryProfile)
 app.use('/maxID',maxid);
 app.use('/acceptOrder',acceptOrder);
+app.use('/acceptOrderDelivery',acceptOrderDelivery);
 
 
 
