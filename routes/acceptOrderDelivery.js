@@ -17,14 +17,8 @@ var resultArray = [];
 
 router.post('/', function(req, res, next) {
 
- var ID = req.body.ID;
-var name = req.body.Name;
-var Price = req.body.price;
-var Totalquantity = req.body.totalquantity;
-var  desc =  req.body.des;
-var type = req.body.Type; 
-var date = req.body.Date;
-
+ var ID = req.body.oID;
+var  dID=req.body.dID;
     
     
   mongo.connect(url, function(err, db )  {
@@ -34,7 +28,7 @@ var date = req.body.Date;
             assert.equal(null, err);
             
             //  var cursor = db.collection('users').insertOne({firstName:FirstName , lastName:LastName , password:Password ,email:Email, phoneNo:MobileNo , roleName:Role});
-            db.collection("food").update({_id:objectId(ID)},{$set:{name:name , price:Price , totalQuantity:Totalquantity ,description:desc, type:type , date:date}}, 
+            db.collection("order").update({_id:objectId(ID)},{$set:{status:"Processing Order",delivID:dID}}, 
     //        db.getCollection('users').updateOne({"firstName":"Ahsan"},{$set:{"password":"ali"}});    
                 function (error) {
                   if(error) {

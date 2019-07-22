@@ -7,6 +7,7 @@ const cors = require('cors');
 
 
 
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var getuser     = require('./routes/get-user');
@@ -28,11 +29,12 @@ var UpdateUser = require('./routes/UpdateUser');
 var DeleteUser = require('./routes/DeleteUser');
 var getFood =require('./routes/get-food');
 var updateFood = require('./routes/update-food');
+var checkEmail= require('./routes/CheckEmail');
 var deleteFood = require('./routes/delete-food');
-var updateDeliveryProfile = require('./routes/updateProfileDelivery');
-
-
-
+var updateDeliveryProfile= require('./routes/updateProfileDelivery');
+var maxid=require('./routes/maxID');
+var acceptOrder=require('./routes/acceptOrder');
+var acceptOrderDelivery=require('./routes/acceptOrderDelivery');
 
 
 var app = express();
@@ -75,7 +77,10 @@ app.use('/get-food',getFood);
 app.use('/update-food',updateFood);
 app.use('/delete-food',deleteFood);
 app.use('/updateProfileDelivery',updateDeliveryProfile)
-
+app.use('/checkEmail',checkEmail);
+app.use('/maxID',maxid);
+app.use('/acceptOrder',acceptOrder);
+app.use('/acceptOrderDelivery',acceptOrderDelivery);
 
 
 
