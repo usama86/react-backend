@@ -74,7 +74,7 @@ app.use('/DeleteUser',DeleteUser);
 app.use('/get-food',getFood);
 app.use('/update-food',updateFood);
 app.use('/delete-food',deleteFood);
-app.use('./updateProfileDelivery',updateDeliveryProfile)
+app.use('/updateProfileDelivery',updateDeliveryProfile)
 
 
 

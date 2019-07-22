@@ -37,11 +37,11 @@ var Address = req.body.Address;
                 function (error) {
                   if(error) {
                                 res.send("dont");
-                                console.log("nhi chala")
-                                console.log("dataabse wala pass "+DBOLDPASS+" old pass jo likha ha "+c+"Emailllll "+ em)
+                         
                             } 
                   else      {
                                 res.send("do");
+                                
                             }
               });
 

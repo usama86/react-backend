@@ -39,7 +39,8 @@ router.post('/', function(req, res, next) {
       var msg="do ";
  // // // // //  //   var na1=resultArray.firstName;
       var token = "kjdgksdgfhfd ";    
-      res.send(resultArray);
+      //res.send(resultArray);
+      res.send(msg+token);
       //+JSON.stringify(resultArray);
     }
      
