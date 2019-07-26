@@ -76,9 +76,8 @@ app.use('/DeleteUser',DeleteUser);
 app.use('/get-food',getFood);
 app.use('/update-food',updateFood);
 app.use('/delete-food',deleteFood);
-app.use('/checkEmail',checkEmail);
-
 app.use('/updateProfileDelivery',updateDeliveryProfile)
+app.use('/checkEmail',checkEmail);
 app.use('/maxID',maxid);
 app.use('/acceptOrder',acceptOrder);
 app.use('/acceptOrderDelivery',acceptOrderDelivery);
