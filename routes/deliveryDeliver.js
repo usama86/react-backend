@@ -18,7 +18,7 @@ var resultArray = [];
 router.post('/', function(req, res, next) {
 
  var ID = req.body.oID;
-var  dID=req.body.dID;
+var  Rtime=req.body.time;
     
     
   mongo.connect(url, function(err, db )  {
@@ -28,7 +28,7 @@ var  dID=req.body.dID;
             assert.equal(null, err);
             
             //  var cursor = db.collection('users').insertOne({firstName:FirstName , lastName:LastName , password:Password ,email:Email, phoneNo:MobileNo , roleName:Role});
-            db.collection("order").update({_id:objectId(ID)},{$set:{status:"Processing",delivID:dID}}, 
+            db.collection("order").update({_id:objectId(ID)},{$set:{status:"Recieved",RecievedTime:Rtime}}, 
     //        db.getCollection('users').updateOne({"firstName":"Ahsan"},{$set:{"password":"ali"}});    
                 function (error) {
                   if(error) {

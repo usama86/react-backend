@@ -35,7 +35,7 @@ var updateDeliveryProfile= require('./routes/updateProfileDelivery');
 var maxid=require('./routes/maxID');
 var acceptOrder=require('./routes/acceptOrder');
 var acceptOrderDelivery=require('./routes/acceptOrderDelivery');
-
+var deliveryDeliver= require('./routes/deliveryDeliver');
 
 var app = express();
 
@@ -82,7 +82,7 @@ app.use('/updateProfileDelivery',updateDeliveryProfile)
 app.use('/maxID',maxid);
 app.use('/acceptOrder',acceptOrder);
 app.use('/acceptOrderDelivery',acceptOrderDelivery);
-
+app.use('/deliveryDeliver',deliveryDeliver)
 
 
 
